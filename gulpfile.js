@@ -57,10 +57,13 @@ const banner = ['/**',
   ''
 ].join('\n');
 
+
+const baseDir = (debug)?'':routes.app;
+
 //arreglo concatenar JS en el orden en el que se cargan
 const jsLibs = [
-  routes.app + routes.js +'libs/jquery.validate.js',
-  routes.app + routes.js +'libs/bootstrap.min.js',
+ baseDir + routes.js +'libs/jquery.validate.js',
+ baseDir + routes.js +'libs/bootstrap.min.js',
 ];
 
 
@@ -132,7 +135,8 @@ gulp.task('views',  () =>{
     .pipe(data( function (file) {
       return {
         debug: debug,
-        name: pkg.name
+        name: pkg.name,
+        libs: jsLibs
       };
     }))
   .pipe(plumber())

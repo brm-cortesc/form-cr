@@ -1,0 +1,106 @@
+#trabajo
+	margin 2rem auto 
+	z-index 2
+	
+	small
+		color $rojo
+		display block
+		margin-bottom 1rem
+		text-align center
+	
+
+
+.form
+	&-checkbox
+		border-color transparent !important
+		cursor pointer
+		margin-bottom 3rem !important
+		
+		.checkbox
+			cursor pointer
+			padding 0 0 2rem
+			position relative
+			
+			label
+				color white
+				cursor pointer
+				display block
+				left unset
+				max-width 87%
+				position absolute
+				right 0
+				top 0
+				transform none
+				text-transform none
+				
+				a
+					color white
+					font-weight $bold
+					position relative
+					z-index 1
+		
+	&-group
+		border 1px solid white
+		border-radius 0.5rem
+		margin 1rem auto
+		max-width 90%
+		padding 1.5rem 1rem
+		position relative
+		transitionBase()
+		width 100%
+		
+
+		&.active
+			background-color white
+			label
+				opacity 0
+				pointer-events none
+				z-index -1
+				
+			input,
+			select
+				color $azul
+		
+		label
+			color white
+			left 1.5rem
+			margin 0
+			position absolute
+			text-transform uppercase
+			top 50%
+			transform translateY(-@top)
+			transitionBase()
+			z-index 3
+			
+		input
+			background-color transparent
+			border none
+			font-size: 1.4rem
+			margin 0
+			padding 0 0.5rem
+			text-transform uppercase
+			transitionBase()
+			width: 100%
+			
+		select
+			background-color transparent
+			border none
+			color #fff
+			cursor pointer
+			font-size: 1.4rem
+			padding 0 0.5rem
+			text-transform uppercase
+			transitionBase()						
+			width: 100%
+			
+			option
+				color $azul !important
+				text-transform uppercase
+	&-select
+		cursor pointer
+	
+			
+.msn-place
+	color $brand-warning
+	padding 0 1.5rem
+		

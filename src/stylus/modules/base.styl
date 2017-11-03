@@ -1,11 +1,5 @@
-/*
--deben ser elementos por default que lucirán igual en todo el sitio, es .
--ningún estilo de estos elementos selectores deberá usar !important.
--no usar selectores tipo class o id.
-*/
-
-	
 a
+	color $azul
 	text-decoration none
 	
 	&:hover
@@ -15,10 +9,32 @@ a
 		border 0
 	
 body
-	color $gris
-	font-size 1.3em
+	path('bg.jpg')
+	background-repeat no-repeat
+	background-position top center
+	color $azul
+	font-size  1.4rem
+	font-weight $normal
+	font-family $font-stack
 	
 
 h1, h2, h3
-	font-family $varela
-	color darken($naranja, 30%)
+	text-transform uppercase
+	font-weight $bold
+	
+
+label
+	margin 0
+	font-weight $light
+	
+
+input,
+select
+	&:hover, &:focus, &:active
+		outline none !important
+		outline 0 !important
+		
+
+strong
+	font-family $font-stack
+	font-weight $bold

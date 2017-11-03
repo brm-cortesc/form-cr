@@ -1,18 +1,63 @@
-.btn-cargar-mas
-	background-color $azul !important
-	color #fff !important
-	font-size 1.5em
+.btn
+	border none
+	border-radius 0.5rem
+	color white
 	display block
-	vertical-align middle
-	margin 1em auto
+	margin: 1rem auto
+	max-width 30rem
+	padding 1rem
+	position relative
+	text-shadow 2px 2px 0px rgba(0, 0, 0, 0.25)
+	text-transform uppercase
+	transitionBase()
+	width 100%
 	
-	&:hover
-		background-color darken($azul, 40%) !important
 
-.btn-primary
-	background-color $azul
-	
-
-	&:hover
-		background-color darken($azul, 40%)
+	&-fb
+		background-color $facebook
+		padding-left 1.5rem
+		position relative
 		
+		&::before
+			background-image embedurl('../embed/fb.svg', 'utf8')
+			background-size 100%
+			content ''
+			cuadrado(2rem)
+			display block
+			left 2rem
+			pointer-events none
+			position absolute
+			top 50%
+			transform translate3d(0,-@top,0)
+			
+
+		&:hover
+			background-color darken($facebook, 40%)
+			
+
+	&-submit
+		background-color $rojo
+		
+		&:hover
+			background-color darken($rojo, 40%)
+
+
+	&-tw
+		background-color $twitter
+		padding-left 1.5rem
+		position relative
+		
+
+		&::before
+			background-image embedurl('../embed/tw.svg', 'utf8')
+			content ''
+			cuadrado(2rem)
+			display block
+			left 2rem
+			pointer-events none
+			position absolute
+			top 50%
+			transform translate3d(0,-@top,0)
+			
+		&:hover
+			background-color darken($twitter, 40%)

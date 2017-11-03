@@ -2,9 +2,13 @@
 
 footer.container-fluid
 	div.row
-		div.col-lg-12
-			h5.block-center.text-center Footer Content
 
+		//Seamos el cambio
+		+image('seamos-el-cambio.png', 'Seamos el Cambio')
+		///-Seamos el cambio
+
+		p: a(href="http://www.partidocambioradical.org", target="_Blank") www.partidocambioradical.org
+		
 
 ///-Footer
 
@@ -12,8 +16,13 @@ footer.container-fluid
 //-Estos son los scripts que van en todos los htmls del desarrollo
 if debug == true
 	script(src='js/libs/jquery.js')
-	script(src='js/libs/bootstrap.min.js')
+	//-Este arreglo imprime todos los js que se declaren en arreglo jsLibs en gulpfile.js:70
+	-for(x =0; x < libs.length; x++)
+		script(src=libs[x])
+	script(src='js/gv.validate.js')
+
 
 else
 	script(src='js/libs/jquery.js')
 	script(src="js/libs.min.js")
+	script(src='js/gv.validate.js')
