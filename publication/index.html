@@ -4,11 +4,11 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="es-CO"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Deje de criticar y véngase a trabajar | Cambio Radical</title>
+  <title>Solicitud Aval | Cambio Radical</title>
   <meta name="description" content="Deje de criticar y véngase a trabajar">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/landing-gv.min.css">
+  <link rel="stylesheet" href="css/formulario-gv.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,900" rel="stylesheet"><!--[if lt IE]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -162,96 +162,209 @@
 
       </div>
       <!--/-Logo Cambio Radical-->
-      <h1 class="text-title"><strong>deje de criticar y</strong><span>véngase a trabajar</span></h1>
+      <h1 class="text-title">Solicitud de aval</h1>
     </div>
   </header>
   <!--/-Header-->
   <section class="container-fluid">
-    <form class="row" id="trabajo" method=""><small>
-        Los campos con <strong>*</strong> son obligatorios
-        
-        </small>
-      <div class="col-form">
-        <!--Nombre-->
-        <div class="form-group">
-          <label for="nombre">
-            Nombre<sup>*</sup></label>
-          <input type="text" id="nombre" name="nombre">
+    <form id="aval-form" method="">
+      <div class="row"><small>
+          Los campos con <strong>*</strong> son obligatorios
+          </small>
+        <div class="col-sm-offset-8 col-sm-4 col-fecha">
+          <div class="form-group"><strong>Fecha  </strong><span class="fecha"></span></div>
         </div>
-        <!--/-Nombre-->
-        <!--Apellidos-->
-        <div class="form-group">
-          <label for="apellidos">
-            Apellidos<sup>*</sup></label>
-          <input type="text" id="apellidos" name="apellidos">
-        </div>
-        <!--/-Apellidos-->
-        <!--Municipio-->
-        <div class="form-group form-select">
-          <label for="municipio">
-            Municipio<sup>*</sup></label>
-          <select name="municipio" id="municipio">
-            <option value=""></option>
-            <option value="1">Un municipio</option>
-          </select>
-        </div>
-        <!--/-Municipio-->
-        <!--Ciudad-->
-        <div class="form-group form-select">
-          <label for="ciudad">
-            Ciudad<sup>*</sup></label>
-          <select name="ciudad" id="ciudad">
-            <option value=""></option>
-            <option value="1">Una ciudad</option>
-          </select>
-        </div>
-        <!--/-Ciudad-->
-        <!--Telefono-->
-        <div class="form-group">
-          <label for="telefono">
-            Teléfono<sup>*</sup></label>
-          <input type="number" min="0" id="telefono" name="telefono">
-        </div>
-        <!--/-Telefono-->
-        <!--email-->
-        <div class="form-group">
-          <label for="email">
-            e-mail<sup>*</sup></label>
-          <input type="email" id="email" name="email">
-        </div>
-        <!--/-email-->
-        <!--Acepto terminos-->
-        <div class="form-group form-checkbox">
-          <div class="checkbox">
-            <input type="checkbox" name="politicas" id="politicas">
-            <label for="politicas">He leído y acepto los términos y condiciones establecidos en el aviso legal. <a href="files/politicas.pdf" target="_blank">Política de privacidad.</a></label>
-          </div>
-        </div>
-        <!--/-Acepto terminos-->
       </div>
       <div class="clearfix"></div>
-      <div class="col-button">
-        <!--Facebook Connect-->
-        <button class="btn btn-fb" type="button">Conéctate con Facebook</button>
-        <!--/-Facebook Connect-->
-        <!--Twitter Connect-->
-        <button class="btn btn-tw" type="button">Conéctate con  Twitter</button>
-        <!--/-Twitter Connect-->
-        <!--Submit-->
-        <button class="btn btn-submit" type="submit">Enviar</button>
+      <!--Tipo de candidato-->
+      <fieldset class="row row-tipo">
+        <legend>solicito aval como candidato a:</legend>
+        <!--cámara-->
+        <div class="col-form col-sm-4 col-sm-offset-2 col-xs-6">
+          <div class="form-group form-radio">
+            <div class="radio">
+              <label>
+                <input type="radio" id="aval-camara" name="avalTipo"><span>Cámara</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!--/-cámara-->
+        <!--Senado-->
+        <div class="col-form col-sm-4 col-xs-6">
+          <div class="form-group form-radio">
+            <div class="radio">
+              <label>
+                <input type="radio" id="aval-senado" name="avalTipo"><span>Senado</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <!--/-Senado-->
+      </fieldset>
+      <!--/-Tipo de candidato-->
+      <div class="clearfix"></div>
+      <!--datos candidato-->
+      <fieldset class="row">
+        <legend>datos personales</legend>
+        <!--Apellidos-->
+        <div class="col-form col-sm-6">
+          <div class="form-group">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos">
+          </div>
+        </div>
+        <!--/-Apellidos-->
+        <!--Nombre-->
+        <div class="col-form col-sm-6">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre">
+          </div>
+        </div>
+        <!--/-Nombre-->
+        <div class="clearfix"></div>
+        <!--num id-->
+        <div class="col-form col-sm-6">
+          <div class="form-group">
+            <label for="cc">No. Identificación</label>
+            <input type="number" min="0" id="cc" name="cc">
+          </div>
+        </div>
+        <!--/-num id-->
+        <!--lugar de expedicion-->
+        <div class="col-form col-sm-6">
+          <div class="form-group">
+            <label for="expedicion">Lugar de expedición</label>
+            <input type="text" id="expedicion" name="expedicion">
+          </div>
+        </div>
+        <!--/-lugar de expedicion-->
+        <div class="clearfix"></div>
+        <!--Direccion-->
+        <div class="col-form col-sm-3">
+          <div class="form-group">
+            <label for="direccionCasa">Dirección de residencia</label>
+            <input type="text" id="direccionCasa" name="direccionCasa">
+          </div>
+        </div>
+        <!--/-Direccion-->
+        <!--dep-->
+        <div class="col-form col-sm-3">
+          <div class="form-group form-select">
+            <label for="depCasa">Departamento</label>
+            <div class="select">
+              <select name="depCasa" id="depCasa">
+                <option value=""></option>
+                <option value="1">Departamento</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!--/-dep-->
+        <!--ciudad-->
+        <div class="col-form col-sm-3">
+          <div class="form-group form-select">
+            <label for="ciudadCasa">Ciudad</label>
+            <div class="select">
+              <select name="ciudadCasa" id="ciudadCasa">
+                <option value=""></option>
+                <option value="1">Una ciudad</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!--/-ciudad-->
+        <!--telefono-->
+        <div class="col-form col-sm-3">
+          <div class="form-group">
+            <label for="telCasa">Teléfono</label>
+            <input type="number" min="0" id="telCasa" name="telCasa">
+          </div>
+        </div>
+        <!--/-telefono-->
+        <div class="clearfix"></div>
+        <!--Direccion-->
+        <div class="col-form col-sm-3">
+          <div class="form-group">
+            <label for="direccionTrabajo">Dirección de trabajo</label>
+            <input type="text" id="direccionTrabajo" name="direccionTrabajo">
+          </div>
+        </div>
+        <!--/-Direccion-->
+        <!--dep-->
+        <div class="col-form col-sm-3">
+          <div class="form-group form-select">
+            <label for="depTrabajo">Departamento</label>
+            <div class="select">
+              <select name="depTrabajo" id="depTrabajo">
+                <option value=""></option>
+                <option value="1">Departamento</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!--/-dep-->
+        <!--ciudad-->
+        <div class="col-form col-sm-3">
+          <div class="form-group form-select">
+            <label for="ciudadTrabajo">Ciudad</label>
+            <div class="select">
+              <select name="ciudadTrabajo" id="ciudadTrabajo">
+                <option value=""></option>
+                <option value="1">Una ciudad</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!--/-ciudad-->
+        <!--telefono-->
+        <div class="col-form col-sm-3">
+          <div class="form-group">
+            <label for="telTrabajo">Teléfono</label>
+            <input type="number" min="0" id="telTrabajo" name="telTrabajo">
+          </div>
+        </div>
+        <!--/-telefono-->
+        <div class="clearfix"></div>
+        <!--correo-->
+        <div class="col-form col-sm-4">
+          <div class="form-group">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo">
+          </div>
+        </div>
+        <!--/-correo-->
+        <!--Celular-->
+        <div class="col-form col-sm-4">
+          <div class="form-group">
+            <label for="telCelular">Celular</label>
+            <input type="number" min="0" id="telCelular" name="telCelular">
+          </div>
+        </div>
+        <!--/-Celular-->
+        <!--Otro-->
+        <div class="col-form col-sm-4">
+          <div class="form-group">
+            <label for="otro">Otro</label>
+            <input type="text" id="otro" name="otro">
+          </div>
+        </div>
+        <!--/-Otro-->
+      </fieldset>
+      <!--/-datos candidato-->
+      <div class="clearfix"></div>
+      <div class="col-button col-sm-4 col-sm-offset-4">
+        <p class="text-center">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo distinctio possimus ex nesciunt dolores ab commodi, quaerat atque doloremque deserunt dolorum doloribus, maxime, fugiat voluptatem numquam officia odit quos mollitia.
+          
+          
+        </p>
+        <button class="btn btn-submit" type="submit">Descargar</button>
         <!--/-Submit-->
       </div>
     </form>
   </section>
-  <!--Footer-->
-  <footer class="container-fluid">
-    <div class="row">
-      <!--Seamos el cambio--><img src="images/seamos-el-cambio.png" title="Seamos el Cambio" alt="Seamos el Cambio"/>
-      <!--/-Seamos el cambio-->
-      <p><a href="http://www.partidocambioradical.org" target="_Blank">www.partidocambioradical.org</a></p>
-    </div>
-  </footer>
-  <!--/-Footer-->
   <!--Scripts-->
   <script src="js/libs/jquery.js"></script>
   <script src="js/libs.min.js"></script>

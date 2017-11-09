@@ -3,96 +3,215 @@ extends ../templates/base.pug
 
 //-Etiqueta Title
 block title
-	title Deje de criticar y véngase a trabajar | Cambio Radical
+	title Solicitud Aval | Cambio Radical
 
 block content
 	section.container-fluid
 		
-		form#trabajo.row(method="")
-			small.
-				Los campos con <strong>*</strong> son obligatorios
+		form#aval-form(method="")
+			div.row
+				small.
+					Los campos con <strong>*</strong> son obligatorios
+
+				div.col-sm-offset-8.col-sm-4.col-fecha
+					div.form-group
+						strong Fecha  
+						span.fecha
+			
+			div.clearfix
+			//Tipo de candidato
+			fieldset.row.row-tipo
+				legend solicito aval como candidato a:
 
 
-			div.col-form
-				//Nombre
-				div.form-group
-					label(for="nombre")
-						| Nombre
-						<sup>*</sup>
-					input(type="text", id="nombre", name="nombre")
-				///-Nombre
+				//cámara
+				div.col-form.col-sm-4.col-sm-offset-2.col-xs-6
+					div.form-group.form-radio
+						div.radio
+							label
+								input(type="radio", id="aval-camara", name="avalTipo")
+								span Cámara
+				///-cámara
+				//Senado
+				div.col-form.col-sm-4.col-xs-6
+
+					div.form-group.form-radio
+						div.radio
+							label
+								input(type="radio", id="aval-senado", name="avalTipo")
+								span Senado
+				///-Senado
+				
+			///-Tipo de candidato
+			div.clearfix
+			//datos candidato
+
+			fieldset.row
+				legend datos personales
 
 				//Apellidos
-				div.form-group
-					label(for="apellidos")
-						| Apellidos
-						<sup>*</sup>
-					input(type="text", id="apellidos", name="apellidos")
+				div.col-form.col-sm-6
+					div.form-group
+						label(for="apellidos")
+							| Apellidos
+							//- <sup>*</sup>
+						input(type="text", id="apellidos", name="apellidos")
 				///-Apellidos
+					
+				//Nombre
+				div.col-form.col-sm-6
+					div.form-group
+						label(for="nombre")
+							| Nombre
+							//- <sup>*</sup>
+						input(type="text", id="nombre", name="nombre")
+				///-Nombre
+
+				div.clearfix
 				
-				//Municipio
-				div.form-group.form-select
-					label(for="municipio")
-						| Municipio
-						<sup>*</sup>
+				//num id
+				div.col-form.col-sm-6
+					div.form-group
+						label(for="cc")
+							| No. Identificación
+						input(type="number", min="0", id="cc", name="cc")
+				///-num id
 
-					select(name="municipio", id="municipio")
-						option(value="")
-						option(value="1") Un municipio
+				//lugar de expedicion
+				div.col-form.col-sm-6
+					div.form-group
+						label(for="expedicion")
+							| Lugar de expedición
+						input(type="text",   id="expedicion", name="expedicion")
 
-				///-Municipio
+				///-lugar de expedicion
 
-				//Ciudad
-				div.form-group.form-select
-					label(for="ciudad")
-						| Ciudad
-						<sup>*</sup>
-
-					select(name="ciudad", id="ciudad")
-						option(value="")
-						option(value="1") Una ciudad
-
-				///-Ciudad
-
-				//Telefono
-				div.form-group
-					label(for="telefono")
-						| Teléfono
-						<sup>*</sup>
-					input(type="number", min="0", id="telefono", name="telefono")
-				///-Telefono
+				div.clearfix
 				
+				//Direccion
+				div.col-form.col-sm-3
+					div.form-group
+						label(for="direccionCasa") Dirección de residencia
+						input(type="text", id="direccionCasa", name="direccionCasa")
+				///-Direccion
 
-				//email
-				div.form-group
-					label(for="email")
-						| e-mail
-						<sup>*</sup>
-					input(type="email",id="email", name="email")
-				///-email
+				//dep
+				div.col-form.col-sm-3
+					div.form-group.form-select
+						label(for="depCasa")
+							| Departamento
+
+						div.select
+
+							select(name="depCasa", id="depCasa")
+								option(value="")
+								option(value="1") Departamento
+				///-dep
+
+				//ciudad
+				div.col-form.col-sm-3
+					div.form-group.form-select
+						label(for="ciudadCasa")
+							| Ciudad
+						
+						div.select
+
+							select(name="ciudadCasa", id="ciudadCasa")
+								option(value="")
+								option(value="1") Una ciudad
+				///-ciudad
+
+				//telefono
+				div.col-form.col-sm-3
+					div.form-group
+						label(for="telCasa") Teléfono
+						input(type="number", min="0", id="telCasa", name="telCasa")
+				///-telefono
+
+				div.clearfix
+
+				//Direccion
+				div.col-form.col-sm-3
+					div.form-group
+						label(for="direccionTrabajo") Dirección de trabajo
+						input(type="text", id="direccionTrabajo", name="direccionTrabajo")
+				///-Direccion
+
+				//dep
+				div.col-form.col-sm-3
+					div.form-group.form-select
+						label(for="depTrabajo")
+							| Departamento
+
+						div.select
+
+							select(name="depTrabajo", id="depTrabajo")
+								option(value="")
+								option(value="1") Departamento
+				///-dep
+
+				//ciudad
+				div.col-form.col-sm-3
+					div.form-group.form-select
+						label(for="ciudadTrabajo")
+							| Ciudad
+
+						div.select
+
+							select(name="ciudadTrabajo", id="ciudadTrabajo")
+								option(value="")
+								option(value="1") Una ciudad
+				///-ciudad
+
+				//telefono
+				div.col-form.col-sm-3
+					div.form-group
+						label(for="telTrabajo") Teléfono
+						input(type="number", min="0", id="telTrabajo", name="telTrabajo")
+				///-telefono
+
+				div.clearfix
+
+				//correo
+				div.col-form.col-sm-4
+					div.form-group
+						label(for="correo") Correo electrónico
+						input(type="email", id="correo", name="correo")
+				///-correo
+
+
+				//Celular
+				div.col-form.col-sm-4
+					div.form-group
+						label(for="telCelular") Celular
+						input(type="number", min="0" id="telCelular", name="telCelular")
+				///-Celular
+
+				//Otro
+				div.col-form.col-sm-4
+					div.form-group
+						label(for="otro") Otro
+						input(type="text", id="otro", name="otro")
+				///-Otro
 				
-
-				//Acepto terminos
-				div.form-group.form-checkbox
-					div.checkbox
-						input(type="checkbox", name="politicas", id="politicas")
-						label(for="politicas")
-							| He leído y acepto los términos y condiciones establecidos en el aviso legal. 
-							a(href="files/politicas.pdf", target="_blank") Política de privacidad.
-				///-Acepto terminos
+			///-datos candidato
 
 
 			div.clearfix
 				
-			div.col-button
-				//Facebook Connect
-				button.btn.btn-fb(type="button") Conéctate con Facebook
-				///-Facebook Connect
-				//Twitter Connect
-				button.btn.btn-tw(type="button") Conéctate con  Twitter
-				///-Twitter Connect
-				//Submit
-				button.btn.btn-submit(type="submit") Enviar
+			div.col-button.col-sm-4.col-sm-offset-4
+				p.text-center.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo distinctio possimus ex nesciunt dolores ab commodi, quaerat atque doloremque deserunt dolorum doloribus, maxime, fugiat voluptatem numquam officia odit quos mollitia.
+
+
+				//- //Facebook Connect
+				//- button.btn.btn-fb(type="button") Conéctate con Facebook
+				//- ///-Facebook Connect
+				//- //Twitter Connect
+				//- button.btn.btn-tw(type="button") Conéctate con  Twitter
+				//- ///-Twitter Connect
+				//- //Submit
+				button.btn.btn-submit(type="submit") Descargar
 				///-Submit
 
 
