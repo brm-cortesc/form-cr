@@ -173,9 +173,19 @@
           </small>
         <div class="col-sm-offset-8 col-sm-4 col-fecha">
           <div class="form-group"><strong>Fecha  </strong><span class="fecha"></span></div>
+          <div class="clearfix"></div>
         </div>
+        <div class="col-sm-offset-3 col-sm-6">
+          <ol class="text-center">
+            <li>Diligencie sus datos en el siguiente formulario.</li>
+            <li>Al final descargue el PDF y llénelo completamente.</li>
+            <li>Imprima el formulario de Solicitud de Aval diligenciado y fírmelo con huella.</li>
+            <li>El formulario debe ser autenticado en Notaría.</li>
+            <li>Envíe por correo certificado el formulario debidamente diligenciado, a la siguiente dirección: Carrera 7 No. 26-20, Piso 26</li>
+          </ol>
+        </div>
+        <div class="clearfix"></div>
       </div>
-      <div class="clearfix"></div>
       <!--Tipo de candidato-->
       <fieldset class="row row-tipo">
         <legend>solicito aval como candidato a:</legend>
@@ -207,22 +217,38 @@
       <!--datos candidato-->
       <fieldset class="row">
         <legend>datos personales</legend>
-        <!--Apellidos-->
+        <!--Apellidos 1-->
         <div class="col-form col-sm-6">
           <div class="form-group">
-            <label for="apellidos">Apellidos</label>
-            <input type="text" id="apellidos" name="apellidos">
+            <label for="apellidos1">Primer Apellido</label>
+            <input type="text" id="apellidos1" name="apellidos1">
           </div>
         </div>
-        <!--/-Apellidos-->
-        <!--Nombre-->
+        <!--/-Apellidos 1-->
+        <!--Apellidos 2-->
         <div class="col-form col-sm-6">
           <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre">
+            <label for="apellidos2">Segundo Apellido</label>
+            <input type="text" id="apellidos2" name="apellidos2">
           </div>
         </div>
-        <!--/-Nombre-->
+        <!--/-Apellidos 2-->
+        <!--Nombre 1-->
+        <div class="col-form col-sm-6">
+          <div class="form-group">
+            <label for="nombre1">Primer Nombre</label>
+            <input type="text" id="nombre1" name="nombre1">
+          </div>
+        </div>
+        <!--/-Nombre 1-->
+        <!--Nombre 2-->
+        <div class="col-form col-sm-6">
+          <div class="form-group">
+            <label for="nombre2">Segundo Nombre</label>
+            <input type="text" id="nombre2" name="nombre2">
+          </div>
+        </div>
+        <!--/-Nombre 2-->
         <div class="clearfix"></div>
         <!--num id-->
         <div class="col-form col-sm-6">
@@ -351,15 +377,21 @@
           </div>
         </div>
         <!--/-Otro-->
+        <div class="clearfix"></div>
+        <div class="col-form col-sm-4 col-sm-offset-4">
+          <div class="checkbox">
+            <input type="checkbox" name="politicas" id="politicas">
+            <label for="politicas">
+              He leído y acepto los <a href="#">términos y condiciones</a> y las <a href="#">políticas de privacidad</a> establecidos en el aviso legal.
+              
+            </label>
+          </div>
+        </div>
       </fieldset>
       <!--/-datos candidato-->
       <div class="clearfix"></div>
       <div class="col-button col-sm-4 col-sm-offset-4">
-        <p class="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo distinctio possimus ex nesciunt dolores ab commodi, quaerat atque doloremque deserunt dolorum doloribus, maxime, fugiat voluptatem numquam officia odit quos mollitia.
-          
-          
-        </p>
+        <!--Submit-->
         <button class="btn btn-submit" type="submit">Descargar</button>
         <!--/-Submit-->
       </div>

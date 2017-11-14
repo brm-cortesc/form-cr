@@ -17,8 +17,20 @@ block content
 					div.form-group
 						strong Fecha  
 						span.fecha
+
+					div.clearfix
+
+				div.col-sm-offset-3.col-sm-6
+					ol.text-center
+						li Diligencie sus datos en el siguiente formulario.
+						li Al final descargue el PDF y llénelo completamente.
+						li Imprima el formulario de Solicitud de Aval diligenciado y fírmelo con huella.
+						li El formulario debe ser autenticado en Notaría.
+						li Envíe por correo certificado el formulario debidamente diligenciado, a la siguiente dirección: Carrera 7 No. 26-20, Piso 26
+
+
 			
-			div.clearfix
+				div.clearfix
 			//Tipo de candidato
 			fieldset.row.row-tipo
 				legend solicito aval como candidato a:
@@ -49,23 +61,43 @@ block content
 			fieldset.row
 				legend datos personales
 
-				//Apellidos
+				//Apellidos 1
 				div.col-form.col-sm-6
 					div.form-group
-						label(for="apellidos")
-							| Apellidos
+						label(for="apellidos1")
+							| Primer Apellido
 							//- <sup>*</sup>
-						input(type="text", id="apellidos", name="apellidos")
-				///-Apellidos
+						input(type="text", id="apellidos1", name="apellidos1")
+				///-Apellidos 1
 					
-				//Nombre
+				//Apellidos 2
 				div.col-form.col-sm-6
 					div.form-group
-						label(for="nombre")
-							| Nombre
+						label(for="apellidos2")
+							| Segundo Apellido
 							//- <sup>*</sup>
-						input(type="text", id="nombre", name="nombre")
-				///-Nombre
+						input(type="text", id="apellidos2", name="apellidos2")
+				///-Apellidos 2
+
+
+
+				//Nombre 1
+				div.col-form.col-sm-6
+					div.form-group
+						label(for="nombre1")
+							| Primer Nombre
+							//- <sup>*</sup>
+						input(type="text", id="nombre1", name="nombre1")
+				///-Nombre 1
+					
+				//Nombre 2
+				div.col-form.col-sm-6
+					div.form-group
+						label(for="nombre2")
+							| Segundo Nombre
+							//- <sup>*</sup>
+						input(type="text", id="nombre2", name="nombre2")
+				///-Nombre 2
 
 				div.clearfix
 				
@@ -193,6 +225,14 @@ block content
 						label(for="otro") Otro
 						input(type="text", id="otro", name="otro")
 				///-Otro
+
+				div.clearfix
+
+				div.col-form.col-sm-4.col-sm-offset-4
+					div.checkbox
+						input(type="checkbox", name="politicas", id="politicas")
+						label(for="politicas").
+							He leído y acepto los <a href="#">términos y condiciones</a> y las <a href="#">políticas de privacidad</a> establecidos en el aviso legal.
 				
 			///-datos candidato
 
@@ -200,17 +240,8 @@ block content
 			div.clearfix
 				
 			div.col-button.col-sm-4.col-sm-offset-4
-				p.text-center.
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo distinctio possimus ex nesciunt dolores ab commodi, quaerat atque doloremque deserunt dolorum doloribus, maxime, fugiat voluptatem numquam officia odit quos mollitia.
 
-
-				//- //Facebook Connect
-				//- button.btn.btn-fb(type="button") Conéctate con Facebook
-				//- ///-Facebook Connect
-				//- //Twitter Connect
-				//- button.btn.btn-tw(type="button") Conéctate con  Twitter
-				//- ///-Twitter Connect
-				//- //Submit
+				//Submit
 				button.btn.btn-submit(type="submit") Descargar
 				///-Submit
 

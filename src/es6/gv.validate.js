@@ -10,7 +10,7 @@ jQuery(document).ready( ()=>{
 	//Fecha quemada
 
 	const fecha = new Date();
-	const dia = fecha.getDay();
+	const dia = fecha.getDate();
 	const mes = fecha.getMonth();
 	const year = fecha.getFullYear();
 
